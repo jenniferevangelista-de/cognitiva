@@ -1,0 +1,15 @@
+Apache Parquet
+O Parquet é um formato colunar e binário que foi desenvolvido em uma cooperação entre o Twitter e Cloudera para criar uma representação colunar eficiente para qualquer projeto para o ecosistema Hadoop.
+
+Além das vantagens em utilizar uma representação colunar, o formato Parquet possui as seguintes vantagens/funcionalidades:
+
+Estruturas de Dados Complexas: Uma das premissas do projeto do Parquet foi o suporte a estruturas de dados complexas e infinitamente encadeáveis. Essa característica foi viabilizada pelo uso do algoritmo Dremel, desenvolvido pelo Google;
+ 
+
+Compactação e Enconding: Para conseguir uma compressão avançada das colunas, o Paquet implementa várias tecnicas de codificação e suporta alguns algoritmos de compressão, como: gzip e snappy;
+ 
+
+Null Values: Valores Nulos ficam de fora do formato parquet. Isso ajuda a economizar ainda mais dados;
+ 
+
+Filter Pushdown: Como forma de otimizar ainda mais a quantidade de dados lidos, alguns filtros podem ser resolvidos antes mesmo de baixar os dados. O Parquet possui uma série de metadados sobre cada coluna em cada arquivo. Dessa forma, pode-se evitar o download de um chuck de coluna do Parquet por ele estar fora do interesse da consulta.
